@@ -3,7 +3,7 @@ import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
 import NightsStayOutlinedIcon from '@mui/icons-material/NightsStayOutlined';
 import styles from '../src/index.module.css'
 import Status from './Status';
-
+//UPDATING
 //ENTER YOUR API KEY HERE. FROM WEATHERAPI
 const API_KEY = ""
 
