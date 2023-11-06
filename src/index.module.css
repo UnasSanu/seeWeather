@@ -1,0 +1,220 @@
+:root {
+    --gradient: linear-gradient(135deg, #72edf2 10%, #5151e5 100%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; /* Fix: Change to 'border-box' */
+    line-height: 1.25rem;
+}
+
+.clear {
+    clear: both;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background: #343d4b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    
+     border-radius: 25px;
+    
+     box-shadow: 0 0 70px -10px rgba(0, 0, 0, 0.2);
+    background: #222831; 
+    color: #ffff;
+    height: 400px;
+}
+.weatherside{
+     position: relative;
+     height: 100%;
+     width: 300px;
+     border-radius: 25px;
+     background-image: url("https://images.unsplash.com/photo-1625895197185-efcec01cffe0?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+     box-shadow: 0 0 20px -10px rgba(0, 0, 0, 0.2);
+     transform: translateZ(0) scale(1.02) perspective(1000px);
+     transition: transform 300ms ease;
+     float: left;
+}
+
+.weatherside:hover{
+    transform: scale(1.1) perspective(15000px) rotateY(10deg);
+    
+
+}   
+
+.weathergradient{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: var(--gradient);
+    border-radius: 25px;
+    opacity: 0.8;
+}
+
+.datecontainer{
+    position: absolute;
+    top: 25px;
+    left: 25px;
+}
+.dateday{
+    display: block;
+}
+
+.location{
+    display: inline-block;
+    margin-top: 10px;
+}
+.weathercontainer{
+    position: absolute;
+    bottom: 25px;
+    left: 25px;
+}
+
+.weathertemp{
+    font-weight: 700;
+    font-size: 3rem;
+    margin: 15px 0px;
+}
+
+.infoside{
+    position: relative;
+    float: left;
+    height: 100%;
+    padding-top: 3%;
+    
+}
+.todayinfo{
+    padding: 15px;
+    margin: 0 25px 25px 25px;
+    border-radius: 10px;
+}
+
+.todayinfo > div:not(:last-child){
+    margin: 0 0 10px 0;
+}
+
+.todayinfo > div .title{
+    float: left;
+    font-weight: 700;
+}
+
+.todayinfo > div .value{
+    float: right;
+}
+
+.weeklist{
+    
+    list-style-type: none;
+    margin: 10px 35px;
+    border-radius: 10px;
+    box-shadow: 0 0 50px --5px rgba(0, 0, 0,0.25);
+}
+
+.weeklist > li{
+    float: left;
+    padding: 15px;
+    cursor: pointer;
+    transform: 200ms ease;
+    border-radius: 10px;
+}
+
+.weeklist > li:hover{
+    transform: scale(1.1);
+    background: #fff;
+    color: #222831;
+    box-shadow: 0 0 40px -5px rgba(0, 0, 0, 0.2);
+}
+
+.weeklist > li.active{
+    background: #fff;
+    color: #222831;
+    border-radius: 10px;
+}
+
+.weeklist > li .dayname{
+    display: block;
+    margin: 10px 0 0 0;
+    text-align: center;
+}
+
+.weeklist > li .daytemp{
+    display: block;
+    text-align: center;
+    margin: 10px 0 0 0;
+    font-weight: 700;
+}
+
+.locationcontainer{
+    padding: 25px 25px;
+}
+
+.locationbutton{
+    outline: none;
+    width: 100%;
+    border: none;
+    padding: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #fff;
+    background-image: var(--gradient);
+    font-weight: 700;
+    box-shadow: 0 0 30px -5px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    transition: transform 200ms ease;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+   
+}
+.locationbutton:hover{
+    transform: scale(1.1);
+}
+
+/* -------------------------form */
+form {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 200px; /* Reduced the width */
+    margin: 0 auto;
+    
+}
+
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+}
+
+input[type="text"]:focus {
+    border-color: #007bff;
+}
+
+input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
